@@ -37,7 +37,7 @@ with st.echo():
     def get_driver():
         return webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
     
-    date = datetime(2023,6,23)
+    date = datetime.datetime(2023,6,23)
 
     options = Options()
     options.add_experimental_option('prefs',  {
