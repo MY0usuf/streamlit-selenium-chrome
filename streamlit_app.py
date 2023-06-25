@@ -49,7 +49,7 @@ with st.echo():
     }
     )
     options.add_argument('--disable-gpu')
-    options.add_argument('--headless')
+    options.add_argument('--start-maximized')
 
     driver = get_driver()
 
