@@ -35,12 +35,8 @@ with st.echo():
 
     @st.experimental_singleton
     def get_driver():
-        return webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
-    
-    date = datetime.datetime(2023,6,23)
-
-    options = Options()
-    options.add_experimental_option('prefs',  {
+        options = Options()
+        options.add_experimental_option('prefs',  {
     "download.default_directory": download_dir,
     "download.prompt_for_download": False,
     "download.directory_upgrade": True,
@@ -48,8 +44,13 @@ with st.echo():
     "pdfjs.disabled": True
     }
     )
-    options.add_argument('--disable-gpu')
-    options.add_argument('--start-maximized')
+        options.add_argument('--disable-gpu')
+        options.add_argument('--start-maximized')
+        return webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
+    
+    date = datetime.datetime(2023,6,23)
+
+
 
     driver = get_driver()
 
