@@ -25,6 +25,6 @@ with st.echo():
     options.add_argument('--headless')
 
     driver = get_driver()
-    driver.get("https://dubailand.gov.ae/en/eservices/licensed-real-estate-brokers-offices/licensed-real-estate-brokers-offices-list/#/")
+    driver.get("https://dubailand.gov.ae/en/open-data/real-estate-data/#/")
 
     st.code(driver.page_source)
